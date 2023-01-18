@@ -67,6 +67,27 @@ main {
   color: #000000;
 }
 
+/* Form Component */
+
+.form-section{
+  margin-bottom: 3rem;
+  
+}
+
+.form-section-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  justify-content: start;
+  border: solid grey 1px;
+}
+
+.form-section-wrapper label{
+  color: rgb(27, 27, 27);
+  display: flex;
+  gap: 20px;
+}
+
 /* Footer */
 footer {
   position: absolute;
