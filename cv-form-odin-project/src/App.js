@@ -26,11 +26,27 @@ function App() {
     lastName: '',
     email: '',
     phone: '',
-    companyName: '',
-    position: '',
-    tasks: '',
-    jobStartDate: '',
-    jobEndDate: ''
+    job1: {
+      companyName: '',
+      position: '',
+      tasks: '',
+      jobStartDate: '',
+      jobEndDate: ''
+    },
+    job2: {
+      companyName: '',
+      position: '',
+      tasks: '',
+      jobStartDate: '',
+      jobEndDate: ''
+    },
+    job3: {
+      companyName: '',
+      position: '',
+      tasks: '',
+      jobStartDate: '',
+      jobEndDate: ''
+    }
   });
   
 
