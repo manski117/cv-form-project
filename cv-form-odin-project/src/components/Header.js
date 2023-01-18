@@ -1,13 +1,14 @@
 import React from "react"
 
 function Header(props) {
+    //take in state from parent component
+    //state reflects page selected
     const onFormPage = props.selected ? true : false;
-    const [isActive, setActive] = React.useState(true);
+    
     console.log(onFormPage)
-    function toggleButtonClass () {
-        setActive(!isActive);
-    }
-
+    
+    //depending on selected page, one button should gain function and loose active class, while the other does the opposite.
+    //this way we only need one handleClick function in the parent component
     return (
         <header className="header">
             <div className="button-wrapper">

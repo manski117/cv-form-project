@@ -7,14 +7,21 @@ import React from 'react';
 
 
 function App() {
+  /////////////good state/////////////////
   //control which page is rendered to main
   const [onFormPage, setOnFormPage] = React.useState(true);
 
+  //conditionally render what content renders based on page selection
   const currentPage = onFormPage ? <Form /> : <Resume />
 
+  ////////////experimental state/////////////
+
+
+  //////////good functions////////////////////
   function togglePage(){
     setOnFormPage(!onFormPage);
   }
+  /////////experimental functions/////////////
 
   return (
     <div className="app-container">
