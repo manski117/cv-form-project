@@ -3,7 +3,7 @@ import { FormContext } from "../App";
 
 
 function EduForm() {
-    const {formData, setFormData} = React.useContext(FormContext)
+    const {formData, setFormData} = React.useContext(FormContext);
     
     // const [formData, setFormData] = React.useState(
     //     {
