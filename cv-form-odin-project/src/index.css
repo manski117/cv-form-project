@@ -40,9 +40,17 @@ header {
   align-items: center;
 }
 
+header > .button-wrapper .active{
+  box-shadow: 0px 0px 6px 3px rgb(255, 255, 255);
+  
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
 .button-wrapper{
   min-width: 280px;
   margin-left: 1rem;
+  margin-top: 5px;
 }
 
 header h3{
@@ -75,6 +83,23 @@ footer {
 
 
 
+
+
+
+/* Link Styling */
+
+a {
+  color: #6565ed;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #eb7d7d;
+  text-decoration: underline;
+}
+
+
+
 /* Button Styling */
 /* Button */
 .button-wrapper button {
@@ -89,18 +114,19 @@ footer {
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
   width: 130px;
+  cursor: pointer;
 }
 
 /* Button Hover */
 .button-wrapper button:hover {
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  
   background-color: #8c9197;
   color: #fffefe;
 }
 
 /* Button Selected */
 .button-wrapper button.selected {
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  
   background-color: #3B4048;
   color: #ffffff;
 }
@@ -122,10 +148,12 @@ footer {
 
   .header-div {
     width: auto;
+    
   }
 
   header h3, h1{
     margin: 0px;
+    margin-bottom: 5px;
   }
 
   
@@ -139,9 +167,11 @@ footer {
 
   .header-div {
     width: auto;
+    
   }
 
   header h3, h1{
     margin: 0px;
+    margin-bottom: 5px;
   }
 }

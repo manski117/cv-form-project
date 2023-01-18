@@ -12,9 +12,15 @@ function App() {
 
   const currentPage = onFormPage ? <Form /> : <Resume />
 
+  function togglePage(){
+    setOnFormPage(!onFormPage);
+  }
+
   return (
     <div className="app-container">
-      <Header />
+      <Header 
+        selected={onFormPage}
+        handleClick={togglePage}/>
       <div className="main-content">
         {currentPage}
         
