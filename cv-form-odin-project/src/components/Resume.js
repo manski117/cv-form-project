@@ -10,6 +10,13 @@ function Resume() {
         <h3>the info from App.js should appear below</h3>
         <p>{formData.school}</p>
         <p>{formData.degree}</p>
+        <p>{formData.firstName} {formData.lastName}</p>
+        <p>{formData.phone}</p>
+        <p>{formData.email}</p>
+        <p>{formData.companyName}</p>
+        <p>{formData.position}</p>
+        <p>{formData.tasks}</p>
+        <p>{formData.jobStartDate} thru {formData.jobEndDate}</p>
        </div>
     )
 }

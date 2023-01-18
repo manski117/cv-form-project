@@ -1,6 +1,7 @@
 import React from "react"
 import BioForm from "./BioForm";
 import EduForm from "./EduForm";
+import ProfessionalForm from "./ProfessionalForm";
 
 function Form() {
     return (
@@ -12,7 +13,9 @@ function Form() {
             <section className="form-section">
                 <EduForm />
             </section>
-            <section className="form-section">Form component will go here</section>
+            <section className="form-section">
+                <ProfessionalForm />
+            </section>
         </form>
        </div>
     )

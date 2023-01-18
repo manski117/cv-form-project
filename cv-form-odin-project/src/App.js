@@ -22,6 +22,15 @@ function App() {
     degree: '',
     startDate: '',
     gradDate: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    companyName: '',
+    position: '',
+    tasks: '',
+    jobStartDate: '',
+    jobEndDate: ''
   });
   
 

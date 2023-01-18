@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { FormContext } from "../App";
 
 
-function EduForm() {
+function ProfessionalForm() {
     const {formData, setFormData} = React.useContext(FormContext);
     
 
@@ -25,56 +25,70 @@ function EduForm() {
 
     return (
         <div className="form-section-wrapper bio-section">
-            <label htmlFor="school">Name of University 
+            <label htmlFor="companyName">Company Name 
                 <input 
-                    id="school" 
-                    name="school" 
+                    id="companyName" 
+                    name="companyName" 
                     type="text" 
                     className="form-input" 
-                    placeholder="University"
+                    placeholder="Company or Organization"
                     onChange={handleChange}
-                    value={formData.school}
+                    value={formData.companyName}
                      />
             </label>
             <br />
-            <label htmlFor="degree">Degree Earned 
+            <label htmlFor="position">Position 
                 <input 
-                    id="degree" 
-                    name="degree" 
+                    id="position" 
+                    name="position" 
                     type="text" 
                     className="form-input" 
-                    placeholder="Degree Earned"
+                    placeholder="Job Title"
                     onChange={handleChange}
-                    value={formData.degree}
+                    value={formData.position}
                      />
             </label>
             <br />
-            <label htmlFor="startDate">Start Date 
-                <input 
-                    id="startDate" 
-                    name="startDate" 
-                    type="text" 
+            <label htmlFor="tasks">Job Tasks 
+                <textarea 
+                    id="tasks" 
+                    name="tasks" 
+                    type="textarea" 
                     className="form-input" 
-                    placeholder="Year Started"
+                    placeholder="Description of job duties"
                     onChange={handleChange}
-                    value={formData.startDate}
+                    value={formData.tasks}
                      />
             </label>
             <br />
-            <label htmlFor="gradDate">Graduation Date 
+            <label htmlFor="jobStartDate">Start Date 
                 <input 
-                    id="gradDate" 
-                    name="gradDate" 
+                    id="jobStartDate" 
+                    name="jobStartDate" 
                     type="text" 
                     className="form-input" 
-                    placeholder="Year of Graduation"
+                    placeholder="Start Date"
                     onChange={handleChange}
-                    value={formData.gradDate}
+                    value={formData.jobStartDate}
                      />
             </label>
+            <br />
+            <label htmlFor="jobEndDate">End Date 
+                <input 
+                    id="jobEndDate" 
+                    name="jobEndDate" 
+                    type="text" 
+                    className="form-input" 
+                    placeholder="End Date or Present"
+                    onChange={handleChange}
+                    value={formData.jobEndDate}
+                     />
+            </label>
+            <br />
+            
         </div>
         
     )
 }
 
-export default EduForm;
+export default ProfessionalForm;
