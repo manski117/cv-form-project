@@ -1,6 +1,8 @@
 import React from "react"
 
+
 function BioForm() {
+    
     const [formData, setFormData] = React.useState(
         {
             firstName: '',
@@ -20,6 +22,7 @@ function BioForm() {
             }
 
         });
+        //test line
         console.log(formData);
 
         

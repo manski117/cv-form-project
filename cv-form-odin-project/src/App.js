@@ -5,6 +5,8 @@ import Form from './components/Form';
 import Resume from './components/Resume';
 import React from 'react';
 
+//creates a context obj to allow us to provide ctx
+const FormContext = React.createContext(null);
 
 function App() {
   /////////////good state/////////////////
@@ -15,11 +17,20 @@ function App() {
   const currentPage = onFormPage ? <Form /> : <Resume />
 
   ////////////experimental state/////////////
+  const [formData, setFormData] = React.useState({
+    school: '',
+    degree: '',
+    startDate: '',
+    gradDate: '',
+  });
+  
+
 
 
   //////////good functions////////////////////
   function togglePage(){
     setOnFormPage(!onFormPage);
+    console.log(formData);
   }
   /////////experimental functions/////////////
 
@@ -28,10 +39,14 @@ function App() {
       <Header 
         selected={onFormPage}
         handleClick={togglePage}/>
-      <div className="main-content">
-        {currentPage}
-        
-      </div>
+      
+        <FormContext.Provider value={{formData, setFormData}}>
+          <div className="main-content">
+            {currentPage}
+          
+          </div>
+        </FormContext.Provider>
+      
 
       <Footer />
       
@@ -39,4 +54,4 @@ function App() {
   );
 }
 
-export default App;
+export  {App, FormContext};
