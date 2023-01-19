@@ -89,6 +89,11 @@ function App() {
     return regex.test(str);
   }
 
+  function isValidYear(str) {
+    let regex = /^[0-9]{4}$/;
+    return regex.test(str);
+  }
+
   
     
   // }
@@ -152,12 +157,47 @@ function App() {
     }
 
     if(formData.phone.length < 5 || !isValidPhone(formData.phone) ){
-      console.log('email is either too short or a bad format');
+      console.log('phone number is either too short or a bad format');
       iFields.push('phone');
       validity = false;
     } else{
       vFields.push('phone');
     }
+
+    if(formData.degree.length < 1){
+      console.log('degree too short');
+      iFields.push('degree');
+      validity = false;
+    } else{
+      vFields.push('degree');
+    }
+
+    if(formData.school.length < 1){
+      console.log('school name is too short');
+      iFields.push('school');
+      validity = false;
+    } else{
+      vFields.push('school');
+    }
+
+
+    if(formData.startDate.length < 2 || !isValidYear(formData.startDate)){
+      console.log('start Date name is too short or improper format');
+      iFields.push('startDate');
+      validity = false;
+    } else{
+      vFields.push('startDate');
+    }
+
+    if(formData.gradDate.length < 2 || !isValidYear(formData.gradDate)){
+      console.log('gradDate name is too short or improper format');
+      iFields.push('gradDate');
+      validity = false;
+    } else{
+      vFields.push('gradDate');
+    }
+
+    
 
     processValidation(vFields, iFields);
     return validity;
