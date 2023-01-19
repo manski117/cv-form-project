@@ -66,11 +66,13 @@ function BioForm() {
                     id="email" 
                     name="email" 
                     type="text" 
-                    className="form-input"
+                    className={formData.emailValid ? "form-input valid" : "form-input invalid"}
                     maxLength={40}  
                     placeholder="Email Address"
                     onChange={handleChange}
                     value={formData.email} />
+                <p className={formData.emailValid ? "form-feedback hidden" : "form-feedback visible"}>Please use valid email format.</p>
+                
             </label>
             <br />
             <label htmlFor="phone">Phone Number 
@@ -78,13 +80,14 @@ function BioForm() {
                     id="phone" 
                     name="phone" 
                     type="text" 
-                    className="form-input"
+                    className={formData.phoneValid ? "form-input valid" : "form-input invalid"}
                     maxLength={16}  
                     placeholder="Phone Number"
                     onChange={handleChange}
                     value={formData.phone} />
+                <p className={formData.phoneValid ? "form-feedback hidden" : "form-feedback visible"}>Provide only numbers and symbols.</p>
+                
             </label>
-            <br />
         </div>
     )
 }

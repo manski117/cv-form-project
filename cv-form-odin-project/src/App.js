@@ -79,23 +79,17 @@ function App() {
     console.log(formData);
   }, [formData]);
 
-  // function invalidateField(string){
-  //   //takes the name of the key as a string
-  //   let key = `${string}Valid`;
-  //   let value = false;
-  //   let formCopy = {...formData};
-  //   formCopy[key] = value;
-  //   setFormData(formCopy);
-    
-  // }
+  function isValidEmail(str) {
+    let regex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+    return regex.test(str);
+  }
 
-  // function validateField(string){
-  //   //takes the name of the key as a string
-  //   let key = `${string}Valid`;
-  //   let value = true;
-  //   let formCopy = {...formData};
-  //   formCopy[key] = value;
-  //   setFormData(formCopy);
+  function isValidPhone(str) {
+    let regex = /^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/;
+    return regex.test(str);
+  }
+
+  
     
   // }
   function processValidation(validArr, invalidArr){
@@ -130,6 +124,7 @@ function App() {
     let validity = true;
     let vFields = [];
     let iFields = [];
+
     if(formData.firstName.length < 1){
       //if !valid, send it to invalid array
       console.log('your first name is too short');
@@ -139,6 +134,7 @@ function App() {
       //if valid, send it to valid array
       vFields.push('firstName');
     }
+
     if(formData.lastName.length < 1){
       console.log('your last name is too short');
       iFields.push('lastName');
@@ -147,6 +143,22 @@ function App() {
       vFields.push('lastName');
     }
     
+    if(formData.email.length < 5 || !isValidEmail(formData.email) ){
+      console.log('email is either too short or a bad format');
+      iFields.push('email');
+      validity = false;
+    } else{
+      vFields.push('email');
+    }
+
+    if(formData.phone.length < 5 || !isValidPhone(formData.phone) ){
+      console.log('email is either too short or a bad format');
+      iFields.push('phone');
+      validity = false;
+    } else{
+      vFields.push('phone');
+    }
+
     processValidation(vFields, iFields);
     return validity;
   }
