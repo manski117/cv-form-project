@@ -16,10 +16,11 @@ function App() {
   //conditionally render what content renders based on page selection
   const currentPage = onFormPage ? <Form /> : <Resume />
 
-  ////////////experimental state/////////////
+  
   const [formData, setFormData] = React.useState({
     school: '',
     degree: '',
+    major:'',
     startDate: '',
     gradDate: '',
     firstName: '',
@@ -46,18 +47,46 @@ function App() {
       tasks: '',
       jobStartDate: '',
       jobEndDate: ''
-    }
+    },
+    schoolValid: true,
+    degreeValid: true,
+    majorValid: true,
+    startDateValid: true,
+    gradDateValid: true,
+    firstNameValid: true,
+    lastNameValid: true,
+    emailValid: true,
+    phoneValid: true,
+    job1Valid: true
+
   });
+  ////////////experimental state/////////////
   
 
 
 
   //////////good functions////////////////////
-  function togglePage(){
-    setOnFormPage(!onFormPage);
-    console.log(formData);
-  }
+  // function togglePage(){
+  //   setOnFormPage(!onFormPage);
+  //   console.log(formData);
+  // }
   /////////experimental functions/////////////
+  function formIsValid(formData){
+    console.log(formData.lastName, formData.firstName, formData.job1.companyName);
+    return true;
+  }
+
+  function togglePage(){
+    if (formIsValid(formData)){
+      setOnFormPage(!onFormPage);
+      console.log(onFormPage);
+    } else{
+      alert('Form contains missing fields');
+    }
+
+    
+  }
+
 
   return (
     <div className="app-container">

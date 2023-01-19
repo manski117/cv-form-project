@@ -97,7 +97,28 @@ footer {
 
 
 
+/* Form User Feedback */
+.invalid{
+  background-color: rgb(252, 208, 208);
+  border: solid red 1px;
+}
 
+.form-feedback{
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: red;
+  display: inline;
+}
+
+.visible{
+  display: inline;
+}
+
+.hidden{
+  display: none;
+}
 
 
 

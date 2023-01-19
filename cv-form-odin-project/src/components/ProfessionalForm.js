@@ -38,6 +38,7 @@ function ProfessionalForm() {
                         type="text"
                         info="job1"
                         className="form-input"
+                        maxLength={20}
                         placeholder="Company or Organization"
                         onChange={handleChange}
                         value={formData.job1.companyName}
@@ -51,6 +52,7 @@ function ProfessionalForm() {
                         type="text"
                         job="job1"
                         className="form-input"
+                        maxLength={20}
                         placeholder="Job Title"
                         onChange={handleChange}
                         value={formData.job1.position}
@@ -63,6 +65,7 @@ function ProfessionalForm() {
                         name="tasks"
                         type="textarea"
                         className="form-input"
+                        maxLength={200}
                         placeholder="Description of job duties"
                         onChange={handleChange}
                         value={formData.job1.tasks}
@@ -75,6 +78,7 @@ function ProfessionalForm() {
                         name="jobStartDate"
                         type="text"
                         className="form-input"
+                        maxLength={12}
                         placeholder="Start Date"
                         onChange={handleChange}
                         value={formData.job1.jobStartDate}
@@ -87,6 +91,7 @@ function ProfessionalForm() {
                         name="jobEndDate"
                         type="text"
                         className="form-input"
+                        maxLength={12}
                         placeholder="End Date or Present"
                         onChange={handleChange}
                         value={formData.job1.jobEndDate}
@@ -103,6 +108,7 @@ function ProfessionalForm() {
                         name="companyName"
                         type="text"
                         className="form-input"
+                        maxLength={20}
                         placeholder="Company or Organization"
                         onChange={handleChange}
                         value={formData.job2.companyName}
@@ -115,6 +121,7 @@ function ProfessionalForm() {
                         name="position"
                         type="text"
                         className="form-input"
+                        maxLength={20}
                         placeholder="Job Title"
                         onChange={handleChange}
                         value={formData.job2.position}
@@ -128,6 +135,7 @@ function ProfessionalForm() {
                         type="textarea"
                         job="job1"
                         className="form-input"
+                        maxLength={200}
                         placeholder="Description of job duties"
                         onChange={handleChange}
                         value={formData.job2.tasks}
@@ -140,6 +148,7 @@ function ProfessionalForm() {
                         name="jobStartDate"
                         type="text"
                         className="form-input"
+                        maxLength={12}
                         placeholder="Start Date"
                         onChange={handleChange}
                         value={formData.job2.jobStartDate}
@@ -152,6 +161,7 @@ function ProfessionalForm() {
                         name="jobEndDate"
                         type="text"
                         className="form-input"
+                        maxLength={12}
                         placeholder="End Date or Present"
                         onChange={handleChange}
                         value={formData.job2.jobEndDate}
@@ -168,6 +178,7 @@ function ProfessionalForm() {
                         name="companyName"
                         type="text"
                         className="form-input"
+                        maxLength={20}
                         placeholder="Company or Organization"
                         onChange={handleChange}
                         value={formData.job3.companyName}
@@ -180,6 +191,7 @@ function ProfessionalForm() {
                         name="position"
                         type="text"
                         className="form-input"
+                        maxLength={20}
                         placeholder="Job Title"
                         onChange={handleChange}
                         value={formData.job3.position}
@@ -193,6 +205,7 @@ function ProfessionalForm() {
                         type="textarea"
                         job="job1"
                         className="form-input"
+                        maxLength={200}
                         placeholder="Description of job duties"
                         onChange={handleChange}
                         value={formData.job3.tasks}
@@ -205,6 +218,7 @@ function ProfessionalForm() {
                         name="jobStartDate"
                         type="text"
                         className="form-input"
+                        maxLength={12}
                         placeholder="Start Date"
                         onChange={handleChange}
                         value={formData.job3.jobStartDate}
@@ -217,6 +231,7 @@ function ProfessionalForm() {
                         name="jobEndDate"
                         type="text"
                         className="form-input"
+                        maxLength={12}
                         placeholder="End Date or Present"
                         onChange={handleChange}
                         value={formData.job3.jobEndDate}

@@ -38,7 +38,8 @@ function BioForm() {
                     id="firstName" 
                     name="firstName" 
                     type="text" 
-                    className="form-input" 
+                    className="form-input"
+                    maxLength={20}  
                     placeholder="First Name"
                     onChange={handleChange}
                     value={formData.firstName} />
@@ -49,7 +50,8 @@ function BioForm() {
                     id="lastName" 
                     name="lastName" 
                     type="text" 
-                    className="form-input" 
+                    className="form-input"
+                    maxLength={25}  
                     placeholder="Last Name"
                     onChange={handleChange}
                     value={formData.lastName} />
@@ -60,7 +62,8 @@ function BioForm() {
                     id="email" 
                     name="email" 
                     type="text" 
-                    className="form-input" 
+                    className="form-input"
+                    maxLength={40}  
                     placeholder="Email Address"
                     onChange={handleChange}
                     value={formData.email} />
@@ -71,7 +74,8 @@ function BioForm() {
                     id="phone" 
                     name="phone" 
                     type="text" 
-                    className="form-input" 
+                    className="form-input"
+                    maxLength={16}  
                     placeholder="Phone Number"
                     onChange={handleChange}
                     value={formData.phone} />
