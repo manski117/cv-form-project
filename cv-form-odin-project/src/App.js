@@ -71,17 +71,48 @@ function App() {
   //   console.log(formData);
   // }
   /////////experimental functions/////////////
+
+  
+  //this line will update when/if my obj changes
+  React.useEffect(() => {
+    console.log('new state just dropped:')
+    console.log(formData);
+  }, [formData]);
+
+  function invalidateField(string){
+    //takes the name of the key as a string
+    let key = `${string}Valid`;
+    let value = false;
+    let formCopy = {...formData};
+    formCopy[key] = value;
+    
+    setFormData(formCopy);
+    
+  }
+
   function formIsValid(formData){
-    console.log(formData.lastName, formData.firstName, formData.job1.companyName);
-    return true;
+    let validity = true;
+    if(formData.firstName.length < 1){
+      console.log('your first name is too short');
+      invalidateField('firstName');
+      validity = false;
+    }
+    if(formData.lastName.length < 1){
+      console.log('your last name is too short');
+      invalidateField('lastName');
+      validity = false;
+    }
+    return validity;
   }
 
   function togglePage(){
     if (formIsValid(formData)){
       setOnFormPage(!onFormPage);
       console.log(onFormPage);
+      
     } else{
       alert('Form contains missing fields');
+      console.log(formData);
     }
 
     

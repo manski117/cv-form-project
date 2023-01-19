@@ -38,11 +38,12 @@ function BioForm() {
                     id="firstName" 
                     name="firstName" 
                     type="text" 
-                    className="form-input"
+                    className={formData.firstNameValid ? "form-input valid" : "form-input invalid"}
                     maxLength={20}  
                     placeholder="First Name"
                     onChange={handleChange}
                     value={formData.firstName} />
+                <p className={formData.firstNameValid ? "form-feedback hidden" : "form-feedback visible"}>This field cannot be blank.</p>
             </label>
             <br />
             <label htmlFor="lastName">Last Name 
