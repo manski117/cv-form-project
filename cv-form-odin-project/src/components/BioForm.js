@@ -51,11 +51,14 @@ function BioForm() {
                     id="lastName" 
                     name="lastName" 
                     type="text" 
-                    className="form-input"
+                    className={formData.lastNameValid ? "form-input valid" : "form-input invalid"}
                     maxLength={25}  
                     placeholder="Last Name"
                     onChange={handleChange}
                     value={formData.lastName} />
+                <p className={formData.lastNameValid ? "form-feedback hidden" : "form-feedback visible"}>This field cannot be blank.</p>
+                                
+                    
             </label>
             <br />
             <label htmlFor="email">Email 
@@ -87,3 +90,5 @@ function BioForm() {
 }
 
 export default BioForm;
+
+

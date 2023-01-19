@@ -79,29 +79,75 @@ function App() {
     console.log(formData);
   }, [formData]);
 
-  function invalidateField(string){
-    //takes the name of the key as a string
-    let key = `${string}Valid`;
-    let value = false;
-    let formCopy = {...formData};
-    formCopy[key] = value;
+  // function invalidateField(string){
+  //   //takes the name of the key as a string
+  //   let key = `${string}Valid`;
+  //   let value = false;
+  //   let formCopy = {...formData};
+  //   formCopy[key] = value;
+  //   setFormData(formCopy);
     
+  // }
+
+  // function validateField(string){
+  //   //takes the name of the key as a string
+  //   let key = `${string}Valid`;
+  //   let value = true;
+  //   let formCopy = {...formData};
+  //   formCopy[key] = value;
+  //   setFormData(formCopy);
+    
+  // }
+  function processValidation(validArr, invalidArr){
+    let formCopy = {...formData};
+
+    //valid loop
+    for (let v = 0; v < validArr.length; v++){
+        let string = validArr[v];
+        let key = `${string}Valid`;
+        let value = true; //valid array
+        formCopy[key] = value;
+        console.log('another valid guy set to true');
+    }
+    //invalid loop
+    for (let i = 0; i < invalidArr.length; i++){
+        let string = invalidArr[i];
+        let key = `${string}Valid`;
+        let value = false; //invalid array
+        formCopy[key] = value;
+        console.log('another invalid guy set to false');
+        
+    }
+    
+    console.log(formCopy);
+    //call setFormData ONLY ONCE.
     setFormData(formCopy);
+
     
   }
 
   function formIsValid(formData){
     let validity = true;
+    let vFields = [];
+    let iFields = [];
     if(formData.firstName.length < 1){
+      //if !valid, send it to invalid array
       console.log('your first name is too short');
-      invalidateField('firstName');
+      iFields.push('firstName');
       validity = false;
+    } else{
+      //if valid, send it to valid array
+      vFields.push('firstName');
     }
     if(formData.lastName.length < 1){
       console.log('your last name is too short');
-      invalidateField('lastName');
+      iFields.push('lastName');
       validity = false;
+    } else{
+      vFields.push('lastName');
     }
+    
+    processValidation(vFields, iFields);
     return validity;
   }
 
