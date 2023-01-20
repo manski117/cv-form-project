@@ -33,7 +33,7 @@ function BioForm() {
 
     return (
         <div className="form-section-wrapper bio-section">
-            <label htmlFor="firstName">First Name 
+            <label htmlFor="firstName">First Name* 
                 <input 
                     id="firstName" 
                     name="firstName" 
@@ -46,7 +46,7 @@ function BioForm() {
                 <p className={formData.firstNameValid ? "form-feedback hidden" : "form-feedback visible"}>This field cannot be blank.</p>
             </label>
             <br />
-            <label htmlFor="lastName">Last Name 
+            <label htmlFor="lastName">Last Name* 
                 <input 
                     id="lastName" 
                     name="lastName" 
@@ -61,7 +61,7 @@ function BioForm() {
                     
             </label>
             <br />
-            <label htmlFor="email">Email 
+            <label htmlFor="email">Email* 
                 <input 
                     id="email" 
                     name="email" 
@@ -75,7 +75,7 @@ function BioForm() {
                 
             </label>
             <br />
-            <label htmlFor="phone">Phone Number 
+            <label htmlFor="phone">Phone Number* 
                 <input 
                     id="phone" 
                     name="phone" 
@@ -88,6 +88,7 @@ function BioForm() {
                 <p className={formData.phoneValid ? "form-feedback hidden" : "form-feedback visible"}>Provide only numbers and symbols.</p>
                 
             </label>
+            <p className="fine-print">* indicates a reqired field</p>
         </div>
     )
 }

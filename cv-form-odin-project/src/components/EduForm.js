@@ -26,7 +26,7 @@ function EduForm() {
 
     return (
         <div className="form-section-wrapper bio-section">
-            <label htmlFor="degree">Highest Degree Earned 
+            <label htmlFor="degree">Highest Degree Earned* 
                 <input 
                     id="degree" 
                     name="degree" 
@@ -40,7 +40,7 @@ function EduForm() {
                 <p className={formData.degreeValid ? "form-feedback major-feedback hidden" : "form-feedback visible"}>This field cannot be blank</p>
             </label>
             <br />
-            <label htmlFor="school">School 
+            <label htmlFor="school">School* 
                 <input 
                     id="school" 
                     name="school" 
@@ -68,7 +68,7 @@ function EduForm() {
                 <p className={formData.majorValid ? "form-feedback major-feedback hidden" : "form-feedback major-feedback visible"}>This field cannot be blank</p>
             </label>
             <br />
-            <label htmlFor="startDate">Year Started 
+            <label htmlFor="startDate">Year Started* 
                 <input 
                     id="startDate" 
                     name="startDate" 
@@ -83,7 +83,7 @@ function EduForm() {
             
             </label>
             <br />
-            <label htmlFor="gradDate">Graduation Date 
+            <label htmlFor="gradDate">Graduation Date* 
                 <input 
                     id="gradDate" 
                     name="gradDate" 
@@ -97,6 +97,7 @@ function EduForm() {
                 <p className={formData.gradDateValid ? "form-feedback major-feedback hidden" : "form-feedback major-feedback visible"}>This field cannot be blank. If not finished, provide the expected year of graduation.</p>
             
             </label>
+            <p className="fine-print">* indicates a reqired field</p>
         </div>
         
     )

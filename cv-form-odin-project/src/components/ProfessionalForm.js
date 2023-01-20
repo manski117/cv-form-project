@@ -22,14 +22,14 @@ function ProfessionalForm() {
         //test line
         console.log(id, name, value);
 
-        
     }
 
 
     return (
         <div className="form-section-wrapper work-section">
             <div className="job1-inputs">
-                <h3>Position 1</h3>
+                <h3>Position 1*</h3>
+                <p className={formData.job1Valid ? "form-feedback hidden" : "form-feedback visible"}>You must provide all details for at least one job.</p>
                 <br />
                 <label htmlFor="companyName">Company Name
                     <input
@@ -239,6 +239,7 @@ function ProfessionalForm() {
                 </label>
                 <br />
             </div>
+            <p className="fine-print">* indicates a reqired field</p>
             
         </div>
         

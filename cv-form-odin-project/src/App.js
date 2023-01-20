@@ -197,7 +197,14 @@ function App() {
       vFields.push('gradDate');
     }
 
-    
+    if(formData.job1.companyName.length < 1 || formData.job1.position.length < 1 || formData.job1.tasks.length < 1 || formData.job1.jobStartDate.length < 1 || formData.job1.jobEndDate.length < 1){
+      console.log('you had one job, and that was to tell me about one job');
+      iFields.push('job1');
+      validity = false;
+    } else{
+      vFields.push('job1');
+    }
+
 
     processValidation(vFields, iFields);
     return validity;
