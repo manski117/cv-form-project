@@ -17,7 +17,7 @@ function Resume() {
             </div>
             <div className="school-flexbox section-flexbox">
                 <div className="school-details">
-                    <p>{formData.school}</p>
+                    <p className="company-name-text">{formData.school}</p>
                     <p>{formData.degree}</p>
                     <p>{formData.major}</p>
                 </div>
@@ -32,8 +32,8 @@ function Resume() {
             </div>
             <div className="job1-flexbox section-flexbox">
                 <div className="job1-details">
-                    <p>{formData.job1.companyName}</p>
-                    <p>{formData.job1.position}</p>
+                    <p className="company-name-text">{formData.job1.companyName}</p>
+                    <p className="position-text">{formData.job1.position}</p>
                     <p>{formData.job1.tasks}</p>
                 </div>
                 <div className="job1-dates">
@@ -43,8 +43,8 @@ function Resume() {
 
             <div className="job2-flexbox section-flexbox">
                 <div className="job2-details">
-                    <p>{formData.job2.companyName}</p>
-                    <p>{formData.job2.position}</p>
+                    <p className="company-name-text">{formData.job2.companyName}</p>
+                    <p className="position-text">{formData.job2.position}</p>
                     <p>{formData.job2.tasks}</p>
                 </div>
                 <div className="job1-dates">
@@ -54,8 +54,8 @@ function Resume() {
 
             <div className="job3-flexbox section-flexbox">
                 <div className="job3-details">
-                    <p>{formData.job3.companyName}</p>
-                    <p>{formData.job3.position}</p>
+                    <p className="company-name-text">{formData.job3.companyName}</p>
+                    <p className="position-text">{formData.job3.position}</p>
                     <p>{formData.job3.tasks}</p>
                 </div>
                 <div className="job1-dates">
