@@ -90,6 +90,8 @@ header h3{
   display: flex;
   flex-direction: column;
   margin: 20px;
+  width: 90%;
+  max-width: 800px;
 }
 
 .resume-container h1, .resume-container h3{
@@ -97,7 +99,7 @@ header h3{
 }
 
 .resume-container h1{
-  font-size: 3.5rem;
+  font-size: clamp(1rem, 12vw, 4rem);
   font-weight: 1000;
 }
 
@@ -140,6 +142,10 @@ header h3{
   display: flex;
   flex-direction: column;
 
+}
+
+.job-details, .school-details{
+  gap:12px;
 }
 
 .company-name-text{

@@ -4,6 +4,9 @@ import { FormContext } from "../App";
 function Resume() {
     const {formData, setFormData} = React.useContext(FormContext);
 
+    let job2exists = formData.job2.startDate;
+    console.log(job2exists);
+
     return (
        <div className="resume-container">
         <h1 className="resume-name">{formData.firstName} {formData.lastName}</h1>
@@ -31,35 +34,39 @@ function Resume() {
                 <h3 className="section-title">Work History</h3>
             </div>
             <div className="job1-flexbox section-flexbox">
-                <div className="job1-details">
+                <div className="job-details">
                     <p className="company-name-text">{formData.job1.companyName}</p>
                     <p className="position-text">{formData.job1.position}</p>
                     <p>{formData.job1.tasks}</p>
                 </div>
                 <div className="job1-dates">
-                <p>{formData.job1.jobStartDate} thru {formData.job1.jobEndDate}</p>
+                <p className="job-dates">{formData.job1.jobStartDate} - {formData.job1.jobEndDate}</p>
                 </div>
             </div>
 
             <div className="job2-flexbox section-flexbox">
-                <div className="job2-details">
+                <div className="job-details">
                     <p className="company-name-text">{formData.job2.companyName}</p>
                     <p className="position-text">{formData.job2.position}</p>
                     <p>{formData.job2.tasks}</p>
                 </div>
-                <div className="job1-dates">
-                <p>{formData.job2.jobStartDate} thru {formData.job2.jobEndDate}</p>
+                <div className="job2-dates">
+                {formData.job2.jobStartDate.length > 0 && 
+                        <p className="job-dates">{formData.job2.jobStartDate} - {formData.job2.jobEndDate} </p>
+                    }
                 </div>
             </div>
 
             <div className="job3-flexbox section-flexbox">
-                <div className="job3-details">
+                <div className="job-details">
                     <p className="company-name-text">{formData.job3.companyName}</p>
                     <p className="position-text">{formData.job3.position}</p>
                     <p>{formData.job3.tasks}</p>
                 </div>
-                <div className="job1-dates">
-                <p>{formData.job3.jobStartDate} thru {formData.job3.jobEndDate}</p>
+                <div className="job3-dates">
+                    {formData.job3.jobStartDate.length > 0 && 
+                        <p className="job-dates">{formData.job3.jobStartDate} - {formData.job3.jobEndDate} </p>
+                    }
                 </div>
             </div>
         </div>
