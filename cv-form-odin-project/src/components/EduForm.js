@@ -26,6 +26,7 @@ function EduForm() {
 
     return (
         <div className="form-section-wrapper bio-section">
+            <h3>Education</h3>
             <label htmlFor="degree">Highest Degree Earned* 
                 <input 
                     id="degree" 

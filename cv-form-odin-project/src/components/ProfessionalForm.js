@@ -27,8 +27,9 @@ function ProfessionalForm() {
 
     return (
         <div className="form-section-wrapper work-section">
+            <h3>Work History</h3>
             <div className="job1-inputs">
-                <h3>Position 1*</h3>
+                <h4>Position 1*</h4>
                 <p className={formData.job1Valid ? "form-feedback hidden" : "form-feedback visible"}>You must provide all details for at least one job.</p>
                 <br />
                 <label htmlFor="companyName">Company Name

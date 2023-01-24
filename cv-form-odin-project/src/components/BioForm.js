@@ -33,6 +33,7 @@ function BioForm() {
 
     return (
         <div className="form-section-wrapper bio-section">
+            <h3>Personal Info</h3>
             <label htmlFor="firstName">First Name* 
                 <input 
                     id="firstName" 
